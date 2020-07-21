@@ -1,6 +1,6 @@
 # MEM_public/Henry_et_al_2020
 
-This specific branch documents the state of MEM used for the inter-model comparison project.
+This specific branch documents the state of MEM used for the inter-model comparison project: https://github.com/carnegie/mem commit 645688243118e01645d38576a1cbe94104bf4808
 
 The `Input_Data/` directory is empty by default and must be populated with input files
 tracked in the inter-model comparison repository: https://github.com/carnegie/capacity-expansion-model-intercomparison/
