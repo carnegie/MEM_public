@@ -95,7 +95,7 @@ The following is installation instructions for MacOS 10.13 machines.
 
 3. Activate the Gurobi license. You have to go to this page https://user.gurobi.com/download/licenses/current to see what licenses are allocated to you. Click on the license that will pertain to your machine. A window will open up that will have some text like:
 
-	grbgetkey ##################
+		grbgetkey #############################
 
 4. Copy that text and paste it in an Anaconda terminal window.
 
