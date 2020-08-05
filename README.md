@@ -5,10 +5,6 @@ This specific branch documents the state of MEM used for the inter-model compari
 The `Input_Data/` directory is empty by default and must be populated with input files
 tracked in the inter-model comparison repository: https://github.com/carnegie/capacity-expansion-model-intercomparison/
 
-## Add some instructions on how to do this?
-
-
-
 ## MEM = Macro Energy Model
 A collaborative project hosted by Carnegie Institution for Science.
 Ken Caldeira <kcaldeira@carnegiescience.edu>
