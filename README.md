@@ -46,7 +46,7 @@ The following is installation instructions for Windows 10 machines.
 
 		grbgetkey #############################
 
-Copy that text and paste in in an Anaconda window.
+Copy and paste this in an Anaconda window.
 
 5. Set up Python link to Gurobi. Open up the Anaconda3 window as Administrator from the Start Menu and then type:
 
@@ -97,18 +97,18 @@ The following is installation instructions for MacOS 10.13 machines.
 
 		grbgetkey #############################
 
-4. Copy that text and paste it in an Anaconda terminal window.
+Copy and paste this in an Anaconda terminal window.
 
-5. Set up Python link to Gurobi. Open up the Anaconda3 terminal window as Administrator from the Start Menu and then type:
+4. Set up Python link to Gurobi. Open up the Anaconda3 terminal window as Administrator from the Start Menu and then type:
 
 	       > conda config --add channels http://conda.anaconda.org/gurobi	
 	       > conda install gurobi
 
-6. Install cvxpy. For Python3, cvxpy must be installed with pip. Open up an Anaconda window and type:
+5. Install cvxpy. For Python3, cvxpy must be installed with pip. Open up an Anaconda window and type:
 
 	       > pip install cvxpy 
 
-7. If you get error messages for not having (or not having the correct versions of) ecos, scs, or cvxcanon, try the following command (Anaconda Cloud):
+6. If you get error messages for not having (or not having the correct versions of) ecos, scs, or cvxcanon, try the following command (Anaconda Cloud):
 
 	       > conda install -c sebp cvxpy
 
@@ -120,6 +120,6 @@ Check the installation with:
 
 If you did not remove an old Gurobi license and installed a new one, you might see an error in this step. You need to delete the old Gurobi licencse and install the new one for your current Gurobi version.
 
-8. Download and run Python3 version of the Macro Energy Model
+7. Download and run Python3 version of the Macro Energy Model
 -- Open case_input.xlsx in Excel. Make the cases you want and then save sheet as case_input.csv.
 -- Open Spyder and then within Spyder navigate to the folder that was cloned from Github and open and run Macro_Energy_Model.py.
