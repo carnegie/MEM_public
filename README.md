@@ -1,4 +1,4 @@
-# MEM_public/Henry_et_al_2020
+# MEM_public/Henry_et_al_2021
 
 This specific branch documents the state of MEM used for the inter-model comparison project: https://github.com/carnegie/mem commit 645688243118e01645d38576a1cbe94104bf4808
 
