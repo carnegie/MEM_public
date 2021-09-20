@@ -1,9 +1,13 @@
 # MEM_public/Henry_et_al_2021
 
+This code was used for the paper:
+Henry et al., Promoting reproducibility and increased collaboration in electric sector capacity expansion models with community benchmarking and intercomparison efforts, Applied Energy, 2021, https://doi.org/10.1016/j.apenergy.2021.117745.
+
 This specific branch documents the state of MEM used for the inter-model comparison project: https://github.com/carnegie/mem commit 645688243118e01645d38576a1cbe94104bf4808
 
 The `Input_Data/` directory is empty by default and must be populated with input files
 tracked in the inter-model comparison repository: https://github.com/carnegie/capacity-expansion-model-intercomparison/
+
 
 ## MEM = Macro Energy Model
 A collaborative project hosted by Carnegie Institution for Science.
