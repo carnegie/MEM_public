@@ -1,10 +1,3 @@
-# Published MEM Repositories for Documentation
+# MEM_public/Kennedy_et_al_2022
 
-This repository contains branches corresponding to published works using the MEM model. It is designed to retain these branches for future documentation and reproducibility.
-
-Also see: https://github.com/Carnegie/SEM_public for a prior version of the model called SEM
-
-# Publication / Associated Branch
-
- * Henry et al., Promoting reproducibility and increased collaboration in electric sector capacity expansion models with community benchmarking and intercomparison efforts, Applied Energy, 2021, https://doi.org/10.1016/j.apenergy.2021.117745.
-   * see branch `Henry_et_al_2021`: https://github.com/Carnegie/MEM_public/tree/Henry_et_al_2021 
+This code was used for the paper "The Role of Concentrated Solar Power with Thermal Energy Storage in Least-Cost Highly Reliable Electricity Systems Fully Powered by Variable Renewable Energy", which is currently in review at Applied Energy. Model code will be posted prior to publication.
