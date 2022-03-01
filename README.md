@@ -1,4 +1,4 @@
-# Distributed_wind_and_solar
+# Distributed_wind_and_solar_generation
 
 This repository contains setup files and instructions to reproduce results of the following paper:
 
