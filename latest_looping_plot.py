@@ -37,6 +37,7 @@ fig, axs = plt.subplots(ncols=len(cases), figsize=(12, 4))
 i = 0
 for case in cases.keys():
 
+    print(case)
     df = dfs[case]
 
     # Get version with 100% EV2
@@ -47,31 +48,32 @@ for case in cases.keys():
     MAX = 0.
     for ev2_pct in df['ev2_pct'].unique():
         #print(ev2_pct)
-        if ev2_pct not in [0, 10, 30, 60, 100]: continue
+        #if ev2_pct not in [0, 10, 30, 60, 100]: continue
+        if ev2_pct in [100,]: continue
         # Get subset of csv file with this EV pct
         tmp = df[ df['ev2_pct'] == ev2_pct ]
         print(ev2_pct, "len:", len(tmp.index))
         #print(tmp['ev_load'])
         ys = ((tmp['value'].values / tmp['total load'].values) - (ev2_100['value'].values / ev2_100['total load'].values)) / n_time_steps # v2
-        axs[i].plot(tmp['ev_load'] / tmp['demand series'], ys, label = f"{ev2_pct}% EV2") # v2
+        if ev2_pct in [0, 20, 40, 60, 80]:
+            axs[i].plot(tmp['ev_load'] / tmp['demand series'], ys, lw=2, label = f"{ev2_pct}%") # v2
+        else:
+            axs[i].plot(tmp['ev_load'] / tmp['demand series'], ys, lw=1, color='gray', label = f"{ev2_pct}%") # v2
         if np.max(ys) > MAX:
             MAX = np.max(ys)
-        #axs[i].plot(tmp['ev_load'] / tmp['demand series'], tmp['value'].values / tmp['total load'].values / n_time_steps, label = f"{ev2_pct}% EV2") # v2
-        #axs[i].plot(tmp['ev_load'] / tmp['demand series'], ((tmp['value'].values / tmp['total load'].values) - (ev2_100['value'].values / ev2_100['total load'].values)) / n_time_steps, label = f"{ev2_pct}% EV2") # v2
-        #axs[i].plot(tmp['ev_load'] / tmp['demand series'], ((tmp['value'].values / tmp['total load'].values) / (ev2_100['value'].values / ev2_100['total load'].values)) - 1., label = f"{ev2_pct}% EV2") # v3
-    #axs[i].set_ylabel('Scenario / 100% EV2 - 1 ($/kWh)') # v3
     axs[i].set_ylim(0, MAX*1.2)
     axs[i].set_xlim(0, 1.)
     axs[i].xaxis.set_major_locator(ticker.MultipleLocator(0.2))
     axs[i].set_title(case, fontweight="bold")
     if i == 0:
         axs[i].set_ylabel('Difference in average\nelectricity cost ($/kWh)') # v2
-        axs[i].legend()
+        axs[i].legend(title="Percent EV2", title_fontproperties={'weight':'bold'})
     if i == 2:
         axs[i].set_xlabel('Total EV load (kW) / Main load (kW)')
     i += 1
 #plt.tight_layout()
 plt.subplots_adjust(left=0.09, bottom=0.146, top=0.91, right=0.97, wspace=0.494, hspace=0.2)
 plt.savefig('total_cost_per_total_kwh_ALL.png')
+plt.savefig('total_cost_per_total_kwh_ALL.pdf')
 plt.show()
 #
