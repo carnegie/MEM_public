@@ -5,7 +5,7 @@ from collections import OrderedDict
 import matplotlib.ticker as ticker
 
 # Check this is correct (not a leap year!)
-n_time_steps = 8760
+n_time_steps = 8784
 
 # Added in order of the panels
 cases = OrderedDict()
@@ -18,6 +18,7 @@ cases['Solar + Wind + Battery'] = 'Looping_Sol_Wnd_Bat_tmp_Mike_EV.csv'
 dfs = {}
 for case, f in cases.items():
     df = pd.read_csv(f)
+    
 
     ### These might all already exist, this csv file is LARGE!
     df['ev_load'] = df['demand_ev2 series'] + df['demand_ev1 series']
@@ -31,8 +32,10 @@ for case, f in cases.items():
 
     dfs[case] = df
 
+import matplotlib as mpl
+mpl.rcParams['figure.dpi']= 1200
 
-fig, axs = plt.subplots(ncols=len(cases), figsize=(12, 4))
+fig, axs = plt.subplots(ncols=len(cases), figsize=(13, 3.5))
 
 Ms = {}
 for case in cases.keys():
@@ -77,15 +80,16 @@ for case in cases.keys():
     axs[i].set_xlim(0, 1.)
     axs[i].xaxis.set_major_locator(ticker.MultipleLocator(0.2))
     #axs[i].yaxis.set_major_formatter(ticker.PercentFormatter())
-    axs[i].set_title(case, fontweight="bold")
+    axs[i].set_title(case, fontsize=11, fontname='Calibri')
     if i == 0:
         #axs[i].set_ylabel('Difference in average\nelectricity cost ($/kWh)') # v2
         #axs[i].set_ylabel('Electricity cost\n(percent of system with zero EVs)') # v2
-        axs[i].set_ylabel('LCOE 100% V1G minus LCOE of the system\nwith incremental V2G ($/kWh)') # v2
+        axs[i].set_ylabel('LCOE 100% V1G minus LCOE of the system\nwith incremental V2G ($/kWh)',fontsize=10, fontname='Calibri') # v2
         #axs[i].legend(ncol=2, title="Percent EV2", title_fontproperties={'weight':'bold'})
-        axs[i].legend(title="Percent V2G", title_fontproperties={'weight':'bold'})
+        #axs[i].legend(title="Percent V2G", title_fontproperties={'weight':'bold'})
+        axs[i].legend(title=r"$\bf{Percent}$ $\bf{V2G}$", fontsize=10)
     if i == 2:
-        axs[i].set_xlabel('Total EV load (kW) / Main load (kW)')
+        axs[i].set_xlabel('total EV load (kW) / Main load (kW)',fontsize=10, fontname='Calibri')
     i += 1
 #plt.tight_layout()
 plt.subplots_adjust(left=0.09, bottom=0.146, top=0.91, right=0.97, wspace=0.494, hspace=0.2)
