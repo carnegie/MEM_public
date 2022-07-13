@@ -150,7 +150,7 @@ for case in cases.keys():
 plt.subplots_adjust(left=0.06, bottom=0.06, top=0.92, right=0.87)
 cbar_ax = fig.add_axes([0.9, 0.18, 0.02, 0.92 - 0.3])
 cbar = fig.colorbar(ims[-1], cax=cbar_ax)
-cbar.ax.set_ylabel('LCOE / LCOE of system\nwith zero EVs ($/kWh)') # v2
+cbar.ax.set_ylabel('LCOE / LCOE of system\nwith zero EVs (%)') # v2
 dec = 0
 cbar.ax.yaxis.set_major_formatter(ticker.PercentFormatter(xmax=100, decimals=dec))
 plt.savefig('maybe_final_fig3_heatmap3.png')
