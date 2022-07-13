@@ -94,6 +94,18 @@ plt.savefig('maybe_final_fig3_line_version.png')
 plt.close()
 #
 
+
+# Custom matplotlib contour percent formatter
+# https://matplotlib.org/stable/gallery/images_contours_and_fields/contour_label_demo.html
+# This custom formatter removes trailing zeros, e.g. "1.0" becomes "1", and
+# then adds a percent sign.
+def fmt(x):
+    s = f"{x:.1f}"
+    if s.endswith("0"):
+        s = f"{x:.0f}"
+    return rf"{s}\%" if plt.rcParams["text.usetex"] else f"{s}%"
+
+
 for k, v in Ms.items():
     print(k, len(v), len(v[0]))
 
@@ -119,17 +131,19 @@ for case in cases.keys():
         x_labs.append(round(x * 0.1,1))
     axs[i].set_xticks(x_ticks, x_labs)
     axs[i].set_yticks(x_ticks, x_labs) # Symmetric labels
+    axs[i].set_xlim(0, 10)
+    axs[i].set_ylim(0, 10)
     axs[i].yaxis.set_major_locator(ticker.FixedLocator([0, 2, 4, 6, 8, 10]))
     axs[i].xaxis.set_major_locator(ticker.FixedLocator([0, 2, 4, 6, 8, 10]))
     #axs[i].yaxis.set_major_formatter(ticker.PercentFormatter(xmax=10, decimals=0))
     axs[i].set_title(case, fontsize=11, fontname='Calibri')
 
     n_levels = np.arange(0,100,10)
-    c_fmt = '%1.0f'
     cs = axs[i].contour(Ms[case], n_levels, colors='k')
     css.append(cs)
     # inline labels
-    axs[i].clabel(cs, inline=1, fontsize=9, fmt=c_fmt)
+    #axs[i].clabel(cs, inline=1, fontsize=9, fmt=fmt)
+    axs[i].clabel(cs, inline=True, fontsize=9, fmt=fmt, inline_spacing=15)
 
     i += 1
 
@@ -139,7 +153,7 @@ cbar = fig.colorbar(ims[-1], cax=cbar_ax)
 cbar.ax.set_ylabel('LCOE / LCOE of system\nwith zero EVs ($/kWh)') # v2
 dec = 0
 cbar.ax.yaxis.set_major_formatter(ticker.PercentFormatter(xmax=100, decimals=dec))
-plt.savefig('maybe_final_fig3_heatmap.png')
+plt.savefig('maybe_final_fig3_heatmap3.png')
 
 
 
