@@ -139,7 +139,7 @@ for case in cases.keys():
     axs[i].set_title(case, fontsize=11, fontname='Calibri')
 
     n_levels = np.arange(0,100,10)
-    cs = axs[i].contour(Ms[case], n_levels, colors='k')
+    cs = axs[i].contour(Ms[case], n_levels, colors='k', , linewidths=1)
     css.append(cs)
     # inline labels
     #axs[i].clabel(cs, inline=1, fontsize=9, fmt=fmt)
