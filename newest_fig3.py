@@ -48,16 +48,18 @@ for case in cases.keys():
 
     # matrix
     M = []
+    D = OrderedDict()
 
+    baseline = np.max(df['lcoe'])
     for ev2 in df['ev2_div_main'].unique():
 
-        baseline = np.max(df['lcoe'])
 
         # Get subset of csv file with this EV pct
         tmp = df[ df['ev2_div_main'] == ev2 ]
         print(ev2, "len:", len(tmp.index))
         ys = tmp['lcoe'] / baseline * 100
         M.append(ys)
+        D[f"V2G {ev2:.2f}"] = ys.values
 
         if np.max(ys) > MAX:
             MAX = np.max(ys)
@@ -70,6 +72,10 @@ for case in cases.keys():
         else:
             axs[i].plot(tmp['ev1_div_main'], ys, lw=1, color='gray', label = f"{ev2}") # v2
     Ms[case] = M
+    df_tmp = pd.DataFrame(D)
+    df_tmp['V1G'] = np.arange(0, 1.01, .1)
+    df_tmp.to_csv(cases[case].replace('.csv', '_for_Fig3.csv'))
+
     #axs[i].set_ylim(0, MAX*1.2)
     #axs[i].set_xlim(0, 1.)
     axs[i].xaxis.set_major_locator(ticker.MultipleLocator(.2))
