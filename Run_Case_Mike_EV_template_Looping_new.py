@@ -27,7 +27,7 @@ case_name_default = case_dic['case_name']
 
 # Make list of EV Loads to scan
 # This could be done better to make thoughtful spacing and an upper range
-ev_loads = [0.0000000001, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+ev_loads = [0.0000000001, 0.022, 0.045, 0.07, 0.096, 0.123, 0.152, 0.183, 0.216, 0.252, 0.29, 0.331, 0.374, 0.422, 0.473, 0.529, 0.59, 0.656, 0.729, 0.81, 0.9, 1.]
 #while ev_loads[-1] < 5:
 #    ev_loads.append( ev_loads[-1] * 1.5 )
 #ev_loads.append(0.) # Zero has to go last b/c of normalization occuring later in code
