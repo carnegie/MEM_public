@@ -112,7 +112,7 @@ edges = np.linspace(0, 1.01, 102)
 centers = edges[:-1] + np.diff(edges[:2])[0] / 2.
 XI, YI = np.meshgrid(centers, centers)
 #lims = dict(cmap='RdBu_r', vmin=0, vmax=5)
-lims = dict(cmap='plasma', vmin=0, vmax=3)
+lims = dict(cmap='plasma', vmin=0)
 MAX = 0
 
 cntr2s = []
@@ -136,8 +136,9 @@ for i, case in enumerate(cases.keys()):
     #pcm = axs[i][0].pcolormesh(X_edges, Y_edges, ZI, shading='flat', **lims)
     ZA = np.abs((np.roll(ZI, -1, axis=0) - ZI))
     ZB = np.abs((np.roll(ZI, -1, axis=1) - ZI))
-    pcm = axs[0][i].pcolormesh(X_edges, Y_edges, ZB, shading='flat', **lims)
-    pcm = axs[1][i].pcolormesh(X_edges, Y_edges, ZA, shading='flat', **lims)
+    print(f"{case}: max A {np.max(ZA)} Max B {np.max(ZB)}")
+    pcmV1G = axs[0][i].pcolormesh(X_edges, Y_edges, ZB, shading='flat', vmax=3, **lims)
+    pcmV2G = axs[1][i].pcolormesh(X_edges, Y_edges, ZA, shading='flat', vmax=3, **lims)
     ##this_max = max( np.abs((np.roll(ZI, -1, axis=0) - ZI)),
     ##        np.abs((np.roll(ZI, -1, axis=1) - ZI)) )
     ##if this_max > MAX:
@@ -176,14 +177,14 @@ for i, case in enumerate(cases.keys()):
 plt.subplots_adjust(left=0.045, bottom=0.15, top=0.9, right=0.9, wspace=.14)
 dec = 1
 cbar_ax1 = fig.add_axes([0.91, 0.56, 0.015, 0.34])
-cbar1 = fig.colorbar(pcm, cax=cbar_ax1)
+cbar1 = fig.colorbar(pcmV1G, cax=cbar_ax1)
 cbar1.ax.yaxis.set_major_formatter(ticker.PercentFormatter(xmax=100, decimals=dec))
 cbar1.ax.set_ylabel(r'$\partial$ LCOE / $\partial$ V1G'+'\n(% LCOE of system with zero EVs)') # v2
 cbar1.ax.yaxis.set_major_formatter(ticker.PercentFormatter(xmax=100, decimals=dec))
 cbar1.ax.yaxis.set_major_locator(ticker.MultipleLocator(.5))
 
 cbar_ax2 = fig.add_axes([0.91, 0.15, 0.015, 0.34])
-cbar2 = fig.colorbar(pcm, cax=cbar_ax2)
+cbar2 = fig.colorbar(pcmV2G, cax=cbar_ax2)
 cbar2.ax.yaxis.set_major_formatter(ticker.PercentFormatter(xmax=100, decimals=dec))
 cbar2.ax.set_ylabel(r'$\partial$ LCOE / $\partial$ V2G'+'\n(% LCOE of system with zero EVs)') # v2
 cbar2.ax.yaxis.set_major_formatter(ticker.PercentFormatter(xmax=100, decimals=dec))
