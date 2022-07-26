@@ -10,7 +10,9 @@ Also see: https://github.com/Carnegie/SEM_public for a prior version of the mode
    * see branch `Henry_et_al_2021`: https://github.com/Carnegie/MEM_public/tree/Henry_et_al_2021 
  * Enrico G. A. Antonini, Tyler H. Ruggles, David J. Farnham, Ken Caldeira, "The quantity-quality transition in the value of expanding wind and solar power generation", iScience 25 (4), 104140, 2022. 
    * see branch `Antonini_et_al_2022`: https://github.com/carnegie/MEM_public/tree/Antonini_et_al_2022
-
+ * Lei Duan, Robert Petroski, Lowell Wood, Ken Caldeira, "Stylized least-cost analysis of flexible nuclear power in deeply decarbonized electricity systems considering wind and solar resources worldwide", Nature Energy (7), 260-269, 2022. 
+   * see branch `main`: https://github.com/carnegie/MEM_public/tree/Antonini_et_al_2022
+ 
 # Publications using prior model version (SEM) / Associated Branch
 
  * Ruggles et al., Opportunities for flexible electricity loads such as hydrogen production from curtailed generation, Advances in Applied Energy, 2021, https://doi.org/10.1016/j.adapen.2021.100051
