@@ -7,7 +7,7 @@ Also see: https://github.com/Carnegie/SEM_public for a prior version of the mode
 # Publications using MEM / Associated Branch
 
  *  Kennedy et al.,  "The role of concentrated solar power with thermal energy storage in least-cost highly reliable electricity systems fully powered by variable renewable energy", Advance in Applied Energy (6),100091, 2022.https://doi.org/10.1016/j.adapen.2022.100091
-  * see branch `main`: https://github.com/carnegie/MEM_public/tree/Kennedy_et_al_2022
+   * see branch `main`: https://github.com/carnegie/MEM_public/tree/Kennedy_et_al_2022
  * Lei Duan, Tyler Ruggles, Ken Caldeira, "Electricity systems in the limit of free solar photovoltaics and continent-scale transmission", IScience(25) 4, 104108, 2022. https://doi.org/10.1016/j.isci.2022.104108
    * see branch `main`: https://github.com/LDuan3008/Value_of_free_solar_2021
  * Lei Duan, Robert Petroski, Lowell Wood, Ken Caldeira, "Stylized least-cost analysis of flexible nuclear power in deeply decarbonized electricity systems considering wind and solar resources worldwide", Nature Energy (7), 260-269, 2022. https://doi.org/10.1038/s41560-022-00979-x 
