@@ -1,0 +1,11 @@
+tech_name,tech_type,node_from,node_to,series_file,normalization,capacity,fixed_cost,var_cost,charging_time,efficiency,decay_rate,mean_dispatch,var_co2
+demand,demand,main_node,,CONUS_demand_synthetic_1950-2020_MEM.csv,,,,,,,,,
+lost_load,lost_load,,main_node,,,,,10,,,,0,
+main_node_curtailment,curtailment,main_node,,,,,,,,,,,
+natgas,generator,,main_node,,,,0.010163177,0.02097,,,,,0.461
+solar,fixed_generator,,main_node,20210921_US_mthd3_1950-2020_solar.csv,,,0.0148,,,,,,
+wind,fixed_generator,,main_node,20210921_US_mthd3_1950-2020_wind.csv,,,0.016,,,,,,
+storage,storage,main_node,main_node,,,,0.00735,,4,0.9,1.00E-05,,
+to_PGP,transfer,main_node,h2_node,,,,0.034609374,,,0.7,,,
+PGP_storage,storage,h2_node,h2_node,,,,3.73E-06,1.00E-06,,1,1.14E-08,,
+from_PGP,transfer,h2_node,main_node,,,,0.058464,1.00E-06,,0.7,,,
