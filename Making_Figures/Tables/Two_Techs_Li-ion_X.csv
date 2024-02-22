@@ -1,0 +1,14 @@
+,RFB,Gravitational,PSH,CAES,Thermal,Metal-Air,Li-ion_PGP
+system_cost,0.127,0.113,0.115,0.103,0.111,0.089,0.083
+battery_cap,1.136,0.558,1.005,0.096,1.009,0.73,0.714
+to_third_tech_cap,0.454,0.641,0.51,0.546,0.511,,
+third_tech_energy_cap,12.991,17.376,14.654,28.403,37.952,72.588,
+from_third_tech_cap,,,,0.768,,,
+to_PGP_cap,,,,,,,0.179
+PGP_storage_cap,,,,,,,371.949
+from_PGP_cap,,,,,,,0.712
+third_tech_dur,28.605,27.123,28.746,37.004,74.278,100,
+PGP_dur,,,,0,,0,522.204
+batt_cycles,59.342,104.236,8.776,141.344,73.47,37.537,232.375
+third_tech_cycles,7.838,10.957,14.226,8.843,6.247,7.383,
+PGP_cycles,,,,0,,0,1.545

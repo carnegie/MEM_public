@@ -1,0 +1,11 @@
+Cost of least-cost system with no storage capacity,0.298,,,,,,,,
+,,,,,,,,,
+,,Single Storage Technologies,,,,,,,
+,Units,Li-ion,RFB,Gravity,PSH,CAES,Thermal,Metal-Air,Hydrogen
+Total System Cost,$/kWh,0.133,0.131,0.113,0.116,0.103,0.114,0.089,0.084
+% Reduction from least-cost system with no storage capacity,%,55.4,56.0,62.1,61.1,65.4,61.7,70.1,71.8
+To Storage Power Capacity,kW,-,0.74,0.784,0.779,0.554,0.749,-,0.198
+Storage Energy Capacity,kWh,4.381,14.975,18.76,18.581,28.383,34.34,89.556,368.036
+From Storage Power Capacity,kW,-,-,-,-,0.791,-,-,0.879
+Storage Optimal Discharge Time,h,4,20.238,23.922,23.838,35.883,45.82,100,418.765
+Storage Equivalent Annual Cycles,cycles/yr,11.744,12.697,14.437,14.256,9.259,9.37,5.892,1.74

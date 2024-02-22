@@ -1,0 +1,13 @@
+Cost of least-cost system with no storage capacity,0.298,,,,,,,
+,,,,,,,,
+,,Second Storage Technology Available Alongside Li-ion Battery Storage,,,,,,
+,Units,RFB,Gravity,PSH,CAES,Thermal,Metal-Air,Hydrogen
+Total System Cost,$/kWh,0.127,0.113,0.115,0.103,0.111,0.089,0.083
+% Reduction from least-cost system with no storage capacity,%,57.4,62.1,61.4,65.4,62.8,70.1,72.1
+Li-ion Battery Capacity,kW,1.136,0.558,1.005,0.096,1.009,0.73,0.714
+To 2nd Storage Power Capacity,kW,0.454,0.641,0.51,0.546,0.511,,0.179
+2nd Storage Energy Capacity,kWh,12.991,17.376,14.654,28.403,37.952,72.588,371.949
+From 2nd Storage Power Capacity,kW,,,,0.768,,,0.712
+2nd Storage Optimal Discharge Time,h,28.605,27.123,28.746,37.004,74.278,100,522.204
+Li-ion Battery Equivalent Annual Cycles,cycles/yr,59.342,104.236,8.776,141.344,73.47,37.537,232.375
+2nd Storage Equivalent Annual Cycles,cycles/yr,7.838,10.957,14.226,8.843,6.247,7.383,1.545
