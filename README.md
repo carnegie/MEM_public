@@ -19,3 +19,6 @@ The repository is structured as follows:
 
 ## Output data
 The run files and output files of the Macro Energy Model can be found in the Zenodo repository: 
+
+###
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10689479.svg)](https://doi.org/10.5281/zenodo.10689479)
