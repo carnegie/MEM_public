@@ -9,7 +9,7 @@ from FindRegion import GetCFsName, update_series, update_timenum
 import sys, numpy as np
 
 if len(sys.argv) == 1:
-    case_input_path_filename = '../Run_Files/Mid_Duration/Param_X.csv'
+    case_input_path_filename = 'Run_Files/Figure_4/X/One_Tech_Metal-Air_20_Total.csv'
 else:
     case_input_path_filename = sys.argv[1]
 
