@@ -7,6 +7,8 @@ For a prior version of the model called SEM, please see: https://github.com/Carn
 # Publications using MEM / Associated Branch
  *  Dowling et al., 2024. "Opportunities and constraints of hydrogen energy storage systems", Environ. Res.: Energy. DOI: https://doi.org/10.1088/2753-3751/ad58e5
     * see branch `master`: https://github.com/carnegie/CLab_Dowling_et_al_EREN_2024
+ *  Li et al. 2024. "The Influence of Regional Geophysical Resource Variability on the Value of Single- and Multistorage Technology Portfolios", Environmental Science & Technology. DOI: https://doi.org/10.1021/acs.est.3c10188
+    * see branch `Li_et_al_2024`: https://github.com/carnegie/MEM_public/tree/Li_et_al_2024
  *  Kennedy et al., 2022. "The role of concentrated solar power with thermal energy storage in least-cost highly reliable electricity systems fully powered by variable renewable energy", Advances in Applied Energy (6),100091. DOI: https://doi.org/10.1016/j.adapen.2022.100091
     * see branch `Kennedy_et_al_2022`: https://github.com/carnegie/MEM_public/tree/Kennedy_et_al_2022
 * Lei Duan, Tyler Ruggles, Ken Caldeira, 2022. "Electricity systems in the limit of free solar photovoltaics and continent-scale transmission", iScience(25) 4, 104108. DOI: https://doi.org/10.1016/j.isci.2022.104108
