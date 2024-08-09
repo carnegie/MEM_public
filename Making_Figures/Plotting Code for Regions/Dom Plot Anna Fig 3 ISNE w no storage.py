@@ -111,9 +111,9 @@ def cost_conts(ax, path, x_labels, colors):
     
     plt.xticks(rotation=90)   
 
-Li_ion_PGP_X_directory = 'C:/Users/covel/OneDrive/Desktop/Rerun-for-Anna/Output_Data/ISNE/three_storage'
-PGP_X_directory = 'C:/Users/covel/OneDrive/Desktop/Rerun-for-Anna/Output_Data/ISNE/two_storage_pgp'
-Li_ion_X_directory = 'C:/Users/covel/OneDrive/Desktop/Rerun-for-Anna/Output_Data/ISNE/two_storage_lion'
+Li_ion_PGP_X_directory = '/Users/annali/Documents/MEM_public.nosync/MEM_code/Output_Data/CONUS/Three_Techs_Li-ion_PGP_X'
+PGP_X_directory = '/Users/annali/Documents/MEM_public.nosync/MEM_code/Output_Data/CONUS/Two_Techs_PGP_X'
+Li_ion_X_directory = '/Users/annali/Documents/MEM_public.nosync/MEM_code/Output_Data/CONUS/Two_Techs_Li-ion_X'
 
 # Set up techs
 {'Li-ion': 326.4, 'RFB': 199.92, 'PSH': 105.162, 'Gravitational': 110.0315246, 'Thermal': 37.842, 'CAES': 51.102, 'Metal-Air': 2.448, 'PGP': 1.9992}
@@ -134,7 +134,7 @@ X_directory = 'C:/Users/covel/OneDrive/Desktop/Rerun-for-Anna/Output_Data/ISNE/o
 X_techs = ['Li-ion', 'RFB', 'PSH', 'Gravitational', 'Thermal', 'CAES', 'Metal-Air', 'PGP'] #For the cases with 1 tech
 
 #No Storage
-no_storage_directory = 'C:/Users/covel/OneDrive/Desktop/Rerun-for-Anna/Output_Data/ISNE/no_storage'
+no_storage_directory = '/Users/annali/Documents/MEM_public.nosync/MEM_code/Output_Data/CONUS/One_Tech_X'
 
 no_storage_techs = ['no_storage_ISNE']
 
